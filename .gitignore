@@ -1,0 +1,60 @@
+# ============================================================
+# Keil MDK + STM32 工程的 .gitignore
+# 用法：复制到工程根目录，重命名为 .gitignore（注意前面有个点）
+# 目的：只把"人写的代码"交给 git，构建产物一概不入库
+# ============================================================
+
+# ---- Keil 编译输出目录 ----
+OBJ/
+Objects/
+LISTING/
+Listings/
+DebugConfig/
+RTE/
+
+# ---- 编译中间文件 ----
+*.o
+*.d
+*.crf
+*.axf
+*.hex
+*.bin
+*.elf
+*.map
+*.lst
+*.lnp
+*.dep
+*.iex
+*.sct
+*.build_log.htm
+*.__i
+*.i
+
+# ---- Keil 的用户界面/调试器个人设置（每台电脑不一样，不该共享）----
+*.uvguix.*
+*.uvoptx
+*.uvopt
+EventRecorderStub.scvd
+JLinkLog.txt
+JLinkSettings.ini
+
+# ---- 采集出来的数据（你这些工程里体积最大的就是它们）----
+out.csv
+raw.bin
+*.wav
+*.csv
+*.npy
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+
+# ---- 系统垃圾 ----
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- 编辑器 ----
+.vscode/
+.idea/
